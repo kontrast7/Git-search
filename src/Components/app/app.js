@@ -13,7 +13,6 @@ class App extends Component {
     followers: null,
     following: null,
     public_repos: null,
-    count: null,
     error: null,
   };
   loginValue = async (e) => {
@@ -36,7 +35,7 @@ class App extends Component {
     }
   };
 
-  
+
   render() {
     return (
       <>
