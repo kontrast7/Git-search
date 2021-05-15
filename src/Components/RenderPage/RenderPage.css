@@ -1,22 +1,49 @@
 .repos-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
 
 .repos-item {
-    width: 100%;
-    margin-top: 24px;
-    padding: 24px 32px;
-    background: #ffffff;
-    border-radius: 6px;
-    text-decoration: none;
-  
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 29px;
-    color: #0064eb;
-  }
-  
+  width: 100%;
+  margin-top: 24px;
+  padding: 24px 32px;
+  background: #ffffff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #0064eb;
+}
+
+
+.pagination li {
+  font-size: 14px;
+  line-height: 21px;
+  color: #808080;
+  margin-left: 7px;
+  margin-right: 7px;
+}
+
+.pagination__link--active a {
+  padding: 2px 6px;
+  background: #0064eb;
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 21px;
+  color: #ffffff !important;
+  /* margin-left: 15px;
+  margin-right: 15px; */
+}
+
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 26px;
+}
+
+

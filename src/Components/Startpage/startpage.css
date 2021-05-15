@@ -1,0 +1,15 @@
+.start-page-content {
+  margin-top: 34vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.start-page-text {
+  margin-top: 46px;
+  font-size: 22px;
+  line-height: 140%;
+  text-align: center;
+  color: #808080;
+}

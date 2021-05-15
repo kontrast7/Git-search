@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import ReactPaginate from "react-paginate";
 import Content from "../Content/content";
 import "./RenderPage.css";
+import prew from "../Img/Rectangle (Stroke).svg";
+import next from "../Img/Rectangle.svg";
 
 const PER_PAGE = 4;
 
@@ -62,25 +64,21 @@ const RenderPage = (props) => {
           <div className="col-sm-8">
             <div className="cont">
               <div className="title-repos">
-                <div>
-                  <div>
-                    {dataUser.login}
-                    <div className="repos-list">
-                      {currentPageData}
-                      <ReactPaginate
-                        previousLabel={"← Previous"}
-                        nextLabel={"Next →"}
-                        pageCount={pageCount}
-                        onPageChange={handlePageClick}
-                        containerClassName={"pagination"}
-                        previousLinkClassName={"pagination__link"}
-                        nextLinkClassName={"pagination__link"}
-                        disabledClassName={"pagination__link--disabled"}
-                        activeClassName={"pagination__link--active"}
-                      />
-                    </div>
-                  </div>
-                </div>
+                Repositories ({dataUser.public_repos})
+              </div>
+              <div className="repos-list">
+                {currentPageData}
+                <ReactPaginate
+                  previousLabel={<img src={prew} />}
+                  nextLabel={<img src={next} />}
+                  pageCount={pageCount}
+                  onPageChange={handlePageClick}
+                  containerClassName={"pagination"}
+                  previousLinkClassName={"pagination__link"}
+                  nextLinkClassName={"pagination__link"}
+                  disabledClassName={"pagination__link--disabled"}
+                  activeClassName={"pagination__link--active"}
+                />
               </div>
             </div>
           </div>
