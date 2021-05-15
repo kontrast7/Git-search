@@ -8,7 +8,7 @@ const Content = (props) => {
     <div className="left-panel">
       <img className="img-fluid user-avatar" src={props.avatar_url} alt='user-avatar'></img>
       <div className="user-name">{props.bio}</div>
-      <div className="user-login">{props.login}</div>
+      <a href={props.login_url} className="user-login" target="_blank">{props.login}</a>
 
       <div className="foll-block">
         <div className="user-followers">

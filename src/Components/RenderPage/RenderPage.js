@@ -37,7 +37,7 @@ const RenderPage = (props) => {
   const currentPageData = data
     .slice(offset, offset + PER_PAGE)
     .map(({ name, html_url, id }) => (
-      <a key={id} className="repos-item" href={html_url}>
+      <a key={id} className="repos-item" href={html_url} target="_blank">
         {name}
       </a>
     ));
@@ -52,6 +52,7 @@ const RenderPage = (props) => {
             <Content
               login={dataUser.login}
               avatar_url={dataUser.avatar_url}
+              login_url={dataUser.html_url}
               bio={dataUser.bio}
               followers={dataUser.followers}
               following={dataUser.following}
