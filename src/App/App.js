@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import Header from "../Components/Header/header.js";
-import RenderPage from "../Components/RenderPage/renderPage.js";
-import Startpage from "../Components/StartPage/startPage.js";
+import Header from "../App/Components/Header/header";
+import RenderPage from "../App/Components/RenderPage/renderPage.js";
+import Startpage from "../App/Components/StartPage/startPage.js";
 
 import "./app.css";
 
