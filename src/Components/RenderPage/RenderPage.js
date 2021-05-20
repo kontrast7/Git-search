@@ -4,8 +4,8 @@ import Content from "../Content/content";
 import "./renderPage.css";
 import prew from "../Img/Rectangle (Stroke).svg";
 import next from "../Img/Rectangle.svg";
-import EmptyState from "../EmptyState/emptyState";
-import EmptyRepos from "../EmptyRepos/emptyRepos";
+import EmptyState from "../EmptyState/emptyState.js";
+import EmptyRepos from "../EmptyRepos/emptyRepos.js";
 
 const PER_PAGE = 4;
 
