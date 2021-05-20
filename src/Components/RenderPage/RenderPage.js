@@ -60,7 +60,7 @@ const RenderPage = (props) => {
             </div>
             <div className="col-sm-8">
               <div className="cont">
-                <EmptyRepos/>
+                <EmptyRepos />
               </div>
             </div>
           </div>
