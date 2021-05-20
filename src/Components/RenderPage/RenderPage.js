@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ReactPaginate from "react-paginate";
-import Content from "../Content/content";
+import Content from "../Content/content.js";
 import "./renderPage.css";
 import prew from "../Img/Rectangle (Stroke).svg";
 import next from "../Img/Rectangle.svg";
