@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Header from "../Header/header";
+import Header from "../Header/header.js";
 import RenderPage from "../RenderPage/renderPage.js";
 import Startpage from "../StartPage/startPage.js";
 
