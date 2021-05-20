@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import ReactPaginate from "react-paginate";
 import Content from "../Content/content";
-import "./RenderPage.css";
+import "./renderPage.css";
 import prew from "../Img/Rectangle (Stroke).svg";
 import next from "../Img/Rectangle.svg";
+import EmptyState from "../EmptyState/emptyState";
+import EmptyRepos from "../EmptyRepos/emptyRepos";
 
 const PER_PAGE = 4;
 
@@ -14,7 +16,7 @@ const RenderPage = (props) => {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [props.url]);
 
   function fetchData() {
     fetch(`https://api.github.com/users/${props.url}/repos`)
@@ -36,10 +38,47 @@ const RenderPage = (props) => {
 
   const offset = currentPage * PER_PAGE;
 
+  if (data?.message) {
+    return <EmptyState />;
+  }
+
+  if (dataUser.public_repos === 0) {
+    return (
+      <div className="main">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-sm-4">
+              <Content
+                login={dataUser.login}
+                avatar_url={dataUser.avatar_url}
+                login_url={dataUser.html_url}
+                bio={dataUser.bio}
+                followers={dataUser.followers}
+                following={dataUser.following}
+                public_repos={dataUser.public_repos}
+              />
+            </div>
+            <div className="col-sm-8">
+              <div className="cont">
+                <EmptyRepos/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   const currentPageData = data
     .slice(offset, offset + PER_PAGE)
     .map(({ name, html_url, id }) => (
-      <a key={id} className="repos-item" href={html_url} target="_blank">
+      <a
+        key={id}
+        className="repos-item"
+        href={html_url}
+        target="_blank"
+        rel="noreferrer"
+      >
         {name}
       </a>
     ));
@@ -68,17 +107,19 @@ const RenderPage = (props) => {
               </div>
               <div className="repos-list">
                 {currentPageData}
-                <ReactPaginate
-                  previousLabel={<img src={prew} />}
-                  nextLabel={<img src={next} />}
-                  pageCount={pageCount}
-                  onPageChange={handlePageClick}
-                  containerClassName={"pagination"}
-                  previousLinkClassName={"pagination__link"}
-                  nextLinkClassName={"pagination__link"}
-                  disabledClassName={"pagination__link--disabled"}
-                  activeClassName={"pagination__link--active"}
-                />
+                <div className="pages">
+                  <ReactPaginate
+                    previousLabel={<img src={prew} alt="prew" />}
+                    nextLabel={<img src={next} alt="next" />}
+                    pageCount={pageCount}
+                    onPageChange={handlePageClick}
+                    containerClassName={"pagination"}
+                    previousLinkClassName={"pagination__link"}
+                    nextLinkClassName={"pagination__link"}
+                    disabledClassName={"pagination__link--disabled"}
+                    activeClassName={"pagination__link--active"}
+                  />
+                </div>
               </div>
             </div>
           </div>

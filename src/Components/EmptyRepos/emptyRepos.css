@@ -1,0 +1,16 @@
+.empty-repos-content {
+  margin-top: 22vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-repos-text {
+  margin-top: 46px;
+  margin-bottom: 20px;
+  font-size: 22px;
+  line-height: 140%;
+  text-align: center;
+  color: #808080;
+}

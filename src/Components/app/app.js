@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Header from "../Header/header";
-import RenderPage from "../RenderPage/RenderPage";
-import Startpage from "../Startpage/startpage";
+import RenderPage from "../RenderPage/renderPage";
+import Startpage from "../StartPage/startPage";
 
 import "./app.css";
 
@@ -17,7 +17,6 @@ class App extends Component {
     this.setState({
       url: loginUser,
     });
-    console.log(this.state.url, "this.State.url");
   };
 
   render() {

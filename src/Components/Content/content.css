@@ -26,17 +26,18 @@
   font-size: 18px;
   line-height: 22px;
   color: #0064eb;
+  text-decoration: none;
 }
 
 .foll-block {
-    display: flex;
-    margin-top: 25px;
-    flex-wrap: wrap;
+  display: flex;
+  margin-top: 25px;
+  flex-wrap: wrap;
 }
 
 .followers-icon,
-.following-icon{
-    margin-right: 9px;
+.following-icon {
+  margin-right: 9px;
 }
 
 .user-followers,
