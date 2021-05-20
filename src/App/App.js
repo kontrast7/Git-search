@@ -3,7 +3,7 @@ import Header from "../App/Components/Header/header";
 import RenderPage from "../App/Components/RenderPage/renderPage.js";
 import Startpage from "../App/Components/StartPage/startPage.js";
 
-import "./app.css";
+import "./App.css";
 
 class App extends Component {
   state = {

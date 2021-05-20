@@ -38,7 +38,7 @@ const RenderPage = (props) => {
 
   const offset = currentPage * PER_PAGE;
 
-  if (data?.message) {
+  if (data.message) {
     return <EmptyState />;
   }
 
